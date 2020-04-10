@@ -1,0 +1,65 @@
+<html>
+<center>
+<img src="plant.gif">
+</center>
+<body bgcolor="#000000">
+<h1 style="text-align: center;"><span style="color: #339966;">Henry's Plants: Your Quarantine source of entertainment! &#x1F61C &#x1F928 &#x1F92F &#x1F92F<span> </h1>
+<h2 style="text-align: center;"><span style="color: #339966;">Watch them grow LIVE!! &#x1F633 &#x1F633</span></h2>
+<p style="text-align: center;"><span style="color: #339966;">Note: If it is dark the plants are sleeping &#x1F629&#x1F629, come back later tho...</span></p>
+<p style="text-align: center;font-weight: bold;"><span style="color: #339966;">HIT COUNTER: </span><script type="text/javascript" src="//counter.websiteout.net/js/2/8/550/0"></script></p>
+<table style="height: 302px;;margin-left:auto;margin-right:auto;" width="525" >
+<tbody>
+<tr>
+
+<td style="width: 355px;"><iframe src="http://henrysplants.live:8082" scrolling="no" width="360" height="300"></iframe><p><span style="color: #ffffff;">Overview of all the plant</span></p></td>
+
+<td><img src="alien.gif" hspace="20"  height="200" width="200"></td>
+
+<td style="width: 355px;"><iframe src="http://henrysplants.live:8084" scrolling="no" width="360" height="300"></iframe><p><span style="color: #ffffff;">POV: P L A N T</span></p></td>
+
+</tr>
+</tbody>
+</table>
+
+
+<center>
+<h2 style="color: #ffffff;">Click Below to play calming music as you watch the plant</h2>
+
+<audio id="audioplayer" controls> <!-- Remove the "Controls" Attribute if you don't want the visual controls -->
+</audio>
+
+<script>
+    var lastSong = null;
+    var selection = null;
+    var playlist = ["song1.mp3", "song2.mp3", "song3.mp3", "song4.mp3"]; // List of Songs
+    var player = document.getElementById("audioplayer"); // Get Audio Element
+    player.autoplay=true;
+    player.addEventListener("ended", selectRandom); // Run function when song ends
+
+    function selectRandom(){
+        while(selection == lastSong){ // Repeat until different song is selected
+            selection = Math.floor(Math.random() * playlist.length);
+        }
+        lastSong = selection; // Remember last song
+        player.src = playlist[selection]; // Tell HTML the location of the new Song
+
+    }
+
+    selectRandom(); // Select initial song
+    player.play(); // Start Song
+</script>
+</center>
+<p>
+<center>
+ <img src="giphy.gif"  hspace="10" height="200" width="200">
+<img src="mine.gif"  height="200" width="200">
+
+</center>
+
+
+
+<link rel="icon" href="favicon.png">
+
+
+</body>
+</html>
